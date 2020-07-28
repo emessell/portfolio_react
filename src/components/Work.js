@@ -75,7 +75,7 @@ const Work = () => {
                     <SkillList>
                         <li># HTML</li>
                         <li># CSS</li>
-                        <li># JAVASCRIPT</li>
+                        <li># JS</li>
                         <li># JQUERY</li>
                         <li># PHP</li>
                         <li># PUG</li>
@@ -86,22 +86,18 @@ const Work = () => {
                     <Company>Otheon</Company>
                     <TitleSm>Projects</TitleSm>
                     <ProjectList>
-                        <li>1. 서비스 웹 VER.1</li>
-                        <li>2. 서비스 웹 VER.2</li>
-                        <li>3. 호텔 관리자 웹</li>
-                        <li>4. 일반인 관리자 웹</li>
-                        <li>5. 회사내부 관리자 웹</li>
+                        <li>1. 관리자 웹 Fullstack</li>
+                        <li>2. 서비스 웹 Front end + RestAPI 제작</li>
                     </ProjectList>
                     <TitleSm>Skill</TitleSm>
                     <SkillList>
                         <li># HTML</li>
                         <li># CSS</li>
-                        <li># JAVASCRIPT</li>
+                        <li># JS</li>
                         <li># JQUERY</li>
-                        <li># PHP</li>
-                        <li># PUG</li>
                         <li># LESS</li>
                         <li># Node.js</li>
+                        <li># EJS</li>
                     </SkillList>
                 </Half>
             </Flexbox>
