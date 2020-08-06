@@ -22,6 +22,23 @@ const Company = styled.h3`
     height: 1.2em;
     font-weight: 700;
     margin-top: 0.4em;
+
+    .gotosee{
+        opacity: 0.5;
+        font-size: 0.6em;
+        transition: all ease 0.5s;
+
+        &:hover{
+            opacity: 1;
+            font-size: 1em;
+        }
+    }
+
+    a{
+        &:hover{
+            text-decoration: none;
+        }
+    }
 `;
 
 const TitleSm = styled.h4`
@@ -31,8 +48,7 @@ const TitleSm = styled.h4`
 `;
 
 const ProjectList = styled.ul`
-    margin-top: 1em;
-    margin-bottom: 1.5em;
+    margin: 1em;
     height: 200px;
 
     li{
@@ -40,6 +56,21 @@ const ProjectList = styled.ul`
         font-size: 1.2em;
         line-height: 1.9em;
         font-weight: 400;
+        color: ${color.black};
+
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+
+`;
+
+const Desc= styled.span`
+    opacity: 0.5;
+    font-size: 0.6em;
+
+    &:hover{
+        opacity: 1;
     }
 `;
 
@@ -62,13 +93,13 @@ const Work = () => {
             <Title className="title">Work</Title>
             <Flexbox>
                 <Half left>
-                    <Company>Cancelmarket</Company>
-                    <TitleSm>Projects</TitleSm>
+                    <Company>Cancelmarket <a href="https://www.cancelmarket.com/"><span className="gotosee" role="img" aria-label="go-to-see">👀</span></a></Company>
+                    <TitleSm>Projects <Desc>Frond End</Desc></TitleSm>
                     <ProjectList>
                         <li>1. 서비스 웹 VER.1</li>
-                        <li>2. 서비스 웹 VER.2</li>
-                        <li>3. 호텔 관리자 웹</li>
-                        <li>4. 일반인 관리자 웹</li>
+                        <li><a href="https://www.cancelmarket.com/">2. 서비스 웹 VER.2 <span className="gotosee" role="img" aria-label="go-to-see">👀</span></a></li>
+                        <li>3. 호텔 관리자용 웹</li>
+                        <li>4. 일반인용 관리자 웹</li>
                         <li>5. 회사내부 관리자 웹</li>
                     </ProjectList>
                     <TitleSm>Skill</TitleSm>
@@ -83,11 +114,12 @@ const Work = () => {
                         <li># Node.js</li>
                     </SkillList>
                 </Half><Half right>
-                    <Company>Otheon</Company>
-                    <TitleSm>Projects</TitleSm>
+                    <Company>Otheon <a href="https://otheon.net/"><span className="gotosee" role="img" aria-label="go-to-see">👀</span></a></Company>
+                    <TitleSm>Projects <Desc>Full Stack</Desc></TitleSm>
                     <ProjectList>
-                        <li>1. 관리자 웹 Fullstack</li>
-                        <li>2. 서비스 웹 Front end + RestAPI 제작</li>
+                        <li>1. 관리자 웹</li>
+                        <li><a href="https://ocopage.net/">2. 서비스 웹 <span className="gotosee" role="img" aria-label="go-to-see">👀</span></a></li>
+                        <li><a href="https://ocopage.net/">3. 회사 소개 웹 <span className="gotosee" role="img" aria-label="go-to-see">👀</span></a></li>
                     </ProjectList>
                     <TitleSm>Skill</TitleSm>
                     <SkillList>
