@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Title = styled.h2`
-    text-align: right;
     margin-bottom: 20px;
 `;
 
@@ -16,7 +15,7 @@ const Link = styled.a`
 const Blog = () => {
     return (
         <div id="blog" className="container">
-            <Title className="title">Blog</Title>
+            <Title className="title right">Blog</Title>
             <Link href="https://emessell.tistory.com/" className="underline">emessell.tistory.com</Link>
             <Link href="https://emessell.github.io/" className="underline">emessell.github.io</Link>
         </div>

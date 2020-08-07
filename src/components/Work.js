@@ -2,9 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import color from '../css/color';
 
-const Title = styled.div`
-`;
-
 const Flexbox = styled.div`
     display: flex;
 `;
@@ -68,10 +65,6 @@ const ProjectList = styled.ul`
 const Desc= styled.span`
     opacity: 0.5;
     font-size: 0.6em;
-
-    &:hover{
-        opacity: 1;
-    }
 `;
 
 const SkillList = styled.ul`
@@ -90,7 +83,7 @@ const SkillList = styled.ul`
 const Work = () => {
     return (
         <div id="work" className="container">
-            <Title className="title">Work</Title>
+            <div className="title">Work</div>
             <Flexbox>
                 <Half left>
                     <Company>Cancelmarket <a href="https://www.cancelmarket.com/"><span className="gotosee" role="img" aria-label="go-to-see">👀</span></a></Company>

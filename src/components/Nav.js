@@ -22,6 +22,7 @@ const Nav = () => {
                 <Li><a href="#intro">Home</a></Li>
                 <Li><a href="#blog">Blog</a></Li>
                 <Li><a href="#work">Work</a></Li>
+                <Li><a href="#contact">Contact</a></Li>
             </Ul>
         </Navi>
     );
