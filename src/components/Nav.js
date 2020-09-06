@@ -13,6 +13,7 @@ const Li = styled.li`
     display: inline-block;
     margin-right: 30px;
     line-height: 50px;
+    font-size: 1.3rem;
 `;
 
 const Nav = () => {

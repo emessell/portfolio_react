@@ -1,5 +1,10 @@
 @import './reset.css';
 
+// media
+$tablet: 768px;
+$mobile: 576px;
+
+// color
 $crusoe		: #2b580c;
 $oxley		: #639a67;
 $teagreen	: #d8ebb5;
@@ -25,10 +30,10 @@ body {
 a{
 	color: $black;
 	text-decoration-line: unset;
-}
 
-a:hover{
-	text-decoration-line: overline;
+	&:hover{
+		text-decoration-line: underline;
+	}
 }
 
 .container{
@@ -38,7 +43,7 @@ a:hover{
 }
 
 .title{
-	font-size: 8em;
+	font-size: 8rem;
 	position: relative;
 	font-weight: 800;
 	line-height: 0.9em;
@@ -47,43 +52,48 @@ a:hover{
 	&.right{
 		text-align: right;
 	}
+
+	@media (max-width: $tablet) {
+		font-size: 4rem;
+	}
 }
 
-.expand{
-	width: 0;
-	overflow: hidden;
-	animation-name: leftToRight;
+.link{
+	font-size: 4rem;
+	@media (max-width: $tablet) {
+		font-size: 2rem;
+	}
+}
+
+.drop{
+	animation-name: Drop;
 	animation-duration: 1.5s;
 	animation-fill-mode: forwards;
 	word-break: break-all;
-	height: 1em;
+	position: relative;
+	top: -500px;
 }
 
-.expand.a{
-	animation-delay: 0.5s;
-}
-.expand.b{
+.drop.a{
 	animation-delay: 1s;
 }
-.expand.c{
-	animation-delay: 1.5s;
+.drop.b{
+	animation-delay: 0.5s;
 }
 
-@keyframes leftToRight{
+@keyframes Drop{
 	from{
-		width: 0%;
-		overflow: hidden;
-	}
-	90%{
-		width: 100%;
-		overflow: visible;
+		top: -500px;
 	}
 	to{
-		width: fit-content;
-		overflow: visible;
+		top: 0px;
 	}
 }
 
-.underline:hover{
-	text-decoration: underline;
+@font-face{
+	font-family: RisollaCalisto;
+	src: url('./font/RisollaCalisto.ttf');
+}
+.RisollaCalisto{
+	font-family: RisollaCalisto;
 }

@@ -4,21 +4,54 @@ import color from '../css/color';
 
 const Flexbox = styled.div`
     display: flex;
+    flex-flow: row wrap;
+
+    @media (max-width: 768px){
+        flex-flow: column;
+    }
 `;
 
 const Half = styled.div`
-    display: inline-block;
-    width: 50%;
+    flex: 50%;
     padding: 15px;
-    background-color: ${props => props.left ? color.oxley : color.straw };
+    box-sizing: border-box;
+
+    &.first{
+        background-color: ${color.oxley};
+    }
+
+    &.second{
+        background-color: ${color.straw};
+    }
+
+    &.third{
+        background-color: ${color.straw};
+        
+        @media (max-width: 768px){
+            background-color: ${color.oxley};
+        }
+    }
+
+    &.fourth{
+        background-color: ${color.oxley};
+        
+        @media (max-width: 768px){
+            display: none;
+            background-color: ${color.straw};
+        }
+    }
 `;
 
 const Company = styled.h3`
-    font-size: 3em;
+    font-size: 3rem;
     border-bottom: 2px solid;
     height: 1.2em;
     font-weight: 700;
     margin-top: 0.4em;
+
+    @media (max-width: 768px){
+        font-size: 1.8rem;
+    }
 
     .gotosee{
         opacity: 0.5;
@@ -31,7 +64,19 @@ const Company = styled.h3`
         }
     }
 
-    a{
+    .workDate{
+        width: 140px;
+        float: right;
+        font-size: 1rem;
+        position: relative;
+        bottom: -35px;
+        
+        @media (max-width: 768px){
+            bottom: -15px;
+        }
+    }
+
+    a {
         &:hover{
             text-decoration: none;
         }
@@ -39,21 +84,29 @@ const Company = styled.h3`
 `;
 
 const TitleSm = styled.h4`
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 600;
     margin-top: 10px;
+
+    @media (max-width: 768px){
+        font-size: 1.5rem;
+    }
 `;
 
 const ProjectList = styled.ul`
-    margin: 1em;
+    margin: 1rem;
     height: 200px;
 
     li{
         font-weight: bold;
-        font-size: 1.2em;
+        font-size: 1.2rem;
         line-height: 1.9em;
         font-weight: 400;
         color: ${color.black};
+
+        @media (max-width: 768px){
+            font-size: 1rem;    
+        }
 
         a:hover{
             text-decoration: underline;
@@ -72,11 +125,16 @@ const SkillList = styled.ul`
 
     li{
         display: inline-block;
+        font-size: 1rem;
         background-color: rgba(255,255,255, 0.6);
-        line-height: 2em;
-        border-radius: 2em;
+        line-height: 2rem;
+        border-radius: 1rem;
         padding: 0 12px;
         margin: 0 10px 10px 0;
+
+        @media (max-width: 768px){
+            font-size: 0.8rem;
+        }
     }
 `;
 
@@ -85,8 +143,13 @@ const Work = () => {
         <div id="work" className="container">
             <div className="title">Work</div>
             <Flexbox>
-                <Half left>
-                    <Company>Cancelmarket <a href="https://www.cancelmarket.com/"><span className="gotosee" role="img" aria-label="go-to-see">👀</span></a></Company>
+                <Half className="first">
+                    <Company>Cancelmarket
+                        <a href="https://www.cancelmarket.com/">
+                            <span className="gotosee" role="img" aria-label="go-to-see">👀</span>
+                        </a>
+                        <span className="workDate">2018.11 ~ 2020.01</span>
+                    </Company>
                     <TitleSm>Projects <Desc>Frond End</Desc></TitleSm>
                     <ProjectList>
                         <li>1. 서비스 웹 VER.1</li>
@@ -106,8 +169,13 @@ const Work = () => {
                         <li># LESS</li>
                         <li># Node.js</li>
                     </SkillList>
-                </Half><Half right>
-                    <Company>Otheon <a href="https://otheon.net/"><span className="gotosee" role="img" aria-label="go-to-see">👀</span></a></Company>
+                </Half><Half className="second">
+                    <Company>Otheon
+                        <a href="https://otheon.net/">
+                            <span className="gotosee" role="img" aria-label="go-to-see">👀</span>
+                        </a>
+                        <span className="workDate">2020.02 ~ 2020.08</span>
+                    </Company>
                     <TitleSm>Projects <Desc>Full Stack</Desc></TitleSm>
                     <ProjectList>
                         <li>1. 관리자 웹</li>
@@ -124,6 +192,23 @@ const Work = () => {
                         <li># Node.js</li>
                         <li># EJS</li>
                     </SkillList>
+                </Half><Half className="third">
+                    <Company>Lab021
+                        <a href="http://www.lab021.co.kr/">
+                            <span className="gotosee" role="img" aria-label="go-to-see">👀</span>
+                        </a>
+                        <span className="workDate working">2020.09 ~ 재직중</span>
+                        </Company>
+                    <TitleSm>Projects <Desc>Front End</Desc></TitleSm>
+                    <ProjectList>
+                        <li>진행중</li>
+                    </ProjectList>
+                    <TitleSm>Skill</TitleSm>
+                    <SkillList>
+                        <li>진행중</li>
+                    </SkillList>
+                </Half>
+                <Half className="fourth">
                 </Half>
             </Flexbox>
         </div>
