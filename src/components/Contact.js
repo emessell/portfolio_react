@@ -8,8 +8,8 @@ const Email = styled.a`
 const Contact = () => {
     return (
         <div id="contact" className="container">
-            <div className="title right">Contact</div>
-            <Email className="link" href="mailto:dev.minius@gmail.com">dev.minius@gmail.com</Email>
+            <div className="title right">Linkedin</div>
+            <Email className="link" href="https://www.linkedin.com/in/minius/">https://www.linkedin.com/in/minius/</Email>
         </div>
     );
 };

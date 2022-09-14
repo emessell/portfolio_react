@@ -141,7 +141,7 @@ const SkillList = styled.ul`
 const Work = () => {
     return (
         <div id="work" className="container">
-            <div className="title">Work</div>
+            <div className="title">Works</div>
             <Flexbox>
                 <Half className="first">
                     <Company>Cancelmarket
@@ -158,7 +158,7 @@ const Work = () => {
                         <li>4. 일반인용 관리자 웹</li>
                         <li>5. 회사내부 관리자 웹</li>
                     </ProjectList>
-                    <TitleSm>Skill</TitleSm>
+                    <TitleSm>Skills</TitleSm>
                     <SkillList>
                         <li># HTML</li>
                         <li># CSS</li>
@@ -182,7 +182,7 @@ const Work = () => {
                         <li><a href="https://ocopage.net/">2. 서비스 웹 <span className="gotosee" role="img" aria-label="go-to-see">👀</span></a></li>
                         <li><a href="https://ocopage.net/">3. 회사 소개 웹 <span className="gotosee" role="img" aria-label="go-to-see">👀</span></a></li>
                     </ProjectList>
-                    <TitleSm>Skill</TitleSm>
+                    <TitleSm>Skills</TitleSm>
                     <SkillList>
                         <li># HTML</li>
                         <li># CSS</li>
@@ -193,7 +193,7 @@ const Work = () => {
                         <li># EJS</li>
                     </SkillList>
                 </Half><Half className="third">
-                    <Company>Lab021
+                    <Company>LAB021
                         <a href="http://www.lab021.co.kr/">
                             <span className="gotosee" role="img" aria-label="go-to-see">👀</span>
                         </a>
@@ -201,11 +201,11 @@ const Work = () => {
                         </Company>
                     <TitleSm>Projects <Desc>Front End</Desc></TitleSm>
                     <ProjectList>
-                        <li>진행중</li>
+                        <li>1. 서비스 API 개발 및 오류 수정</li>
                     </ProjectList>
-                    <TitleSm>Skill</TitleSm>
+                    <TitleSm>Skills</TitleSm>
                     <SkillList>
-                        <li>진행중</li>
+                        <li># C#</li>
                     </SkillList>
                 </Half>
                 <Half className="fourth">
